@@ -34,7 +34,7 @@ rpmbuild --ba name.spec  # RPM+SRPM build
 ``` bash
 
 № Утилиты для сборки 
-yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree
+yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree gcc
 
 # Образ SRPM 
 wget http://vault.centos.org/8.3.2011/AppStream/Source/SPackages/httpd-2.4.37-30.module_el8.3.0+561+97fdbbcc.src.rpm 
