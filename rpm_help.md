@@ -57,7 +57,7 @@ error: Failed build dependencies:
 	zlib-devel is needed by httpd-2.4.37-30.el8.x86_64
 ```
 
-## VIM
+## VIM httpd.spec
 ```
 # Build the daemon
 ./configure \
