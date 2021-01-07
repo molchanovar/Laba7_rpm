@@ -6,7 +6,7 @@ make            # Run building process
 make clean      # Remove all builded files 
 male install    # Install compiled programm 
 make uninstall  # Uninstall previously installed programm 
-
+```
 
 # RPM
 
