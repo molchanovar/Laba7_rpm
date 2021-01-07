@@ -39,6 +39,9 @@ yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils
 # Образ SRPM 
 wget http://vault.centos.org/8.3.2011/AppStream/Source/SPackages/httpd-2.4.37-30.module_el8.3.0+561+97fdbbcc.src.rpm 
 
+# Распаковка tar.gz 
+tar -xzf FileName.tar.gz
+
 # Создание древа каталогов для сборки (DIR: /home/artem/rpmbuild):
 rpm -i httpd-2.4.37-30.module_el8.3.0+561+97fdbbcc.src.rpm
 
