@@ -32,12 +32,24 @@ rpmbuild --ba name.spec  # RPM+SRPM build
 
 ## Lab making
 ``` bash
+
+№ Утилиты для сборки 
+yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils
+
 # Образ SRPM 
 wget http://vault.centos.org/8.3.2011/AppStream/Source/SPackages/httpd-2.4.37-30.module_el8.3.0+561+97fdbbcc.src.rpm 
 
 # Создание древа каталогов для сборки (DIR: /home/artem/rpmbuild):
 rpm -i httpd-2.4.37-30.module_el8.3.0+561+97fdbbcc.src.rpm
 
+# Просмотр древа каталогов
+tree /home/artem/rpmbuild/
+
+# Поиск всех зависимостей для пакета 
+yum-builddep /home/artem/rpmbuild/SPECS/httpd.spec
+
+# Сборка пакета
+rpmbuild -bb /home/artem/rpmbuild/SPECS/httpd.spec
 
 # При сборке вышли траблы
 rpmbuild -bb /home/artem/rpmbuild/SPECS/httpd.spec 
