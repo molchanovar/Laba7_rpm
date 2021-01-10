@@ -14,7 +14,7 @@ git clone https://github.com/molchanovar/Laba7_rpm.git
 cp /home/vagrant/Laba7_rpm/calendar.spec /home/vagrant/rpmbuild/SPECS/
 
 # Создание RPM + SRPM пакетов (на выходе получены файлы SimpleCalendar-1.00-1.01.x86_64.rpm и SimpleCalendar-1.00-1.01.src.rpm)
-rpmbuild -ba calendar.spec
+rpmbuild -ba /home/vagrant/rpmbuild/SPECS/calendar.spec
 tree /home/vagrant/rpmbuild
 
 # ├── RPMS
