@@ -21,6 +21,25 @@ tree /home/vagrant/rpmbuild
 # │   └── x86_64
 # │       └── SimpleCalendar-1.00-1.01.x86_64.rpm
 
+
 # 2. Создание repo и добавление в него rpm пакета 
+
+# Установка Nginx  
+wget https://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.18.0-2.el7.ngx.x86_64.rpm
+sudo yum localinstall -y nginx-1.18.0-2.el7.ngx.x86_64.rpm
+systemctl start nginx
+systemctl status nginx
+
+# Создание репозитория SimpleCalendar и загрузка своего RPM 
+mkdir /usr/share/nginx/html/repo
+cp /home/vagrant/rpmbuild/RPMS/x86_64/SimpleCalendar-1.00-1.01.x86_64.rpm /usr/share/nginx/html/repo/
+createrepo /usr/share/nginx/html/repo/
+cat >> /etc/yum.repos.d/otus.repo << EOF 
+[Calendar]
+name=SimpleCalendar 
+baseurl=http://localhost/repo
+gpgcheck=0
+enabled=1
+EOF
 
 
