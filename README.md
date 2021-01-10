@@ -12,5 +12,7 @@ soft distribution
 
 
 Файлы:
+
 <B>Calendar.py</B> - исходный код приложения "Календарь" 
+
 <B>CreateRPM_script.sh</B> - 
