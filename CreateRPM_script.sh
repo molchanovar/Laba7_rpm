@@ -3,7 +3,7 @@
 # 1. Создание rpm пакета 
 
 # Утилиты для сборки 
-sudo yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree gcc python3 git
+sudo yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree gcc python3 git curl lynx
 
 # Создание директорий rpmbuild{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 # rpmdev-setuptree
@@ -32,12 +32,21 @@ sudo systemctl status nginx
 
 # Создание репозитория SimpleCalendar и загрузка своего RPM 
 mkdir /usr/share/nginx/html/repo
-cp /home/vagrant/rpmbuild/RPMS/x86_64/SimpleCalendar-1.00-1.01.x86_64.rpm /usr/share/nginx/html/repo/
+cp /root/rpmbuild/RPMS/x86_64/SimpleCalendar-1.00-1.01.x86_64.rpm /usr/share/nginx/html/repo/
 createrepo /usr/share/nginx/html/repo/
-cat >> /etc/yum.repos.d/otus.repo << EOF 
+cat >> /etc/yum.repos.d/myApp.repo << EOF 
 [Calendar]
 name=SimpleCalendar 
 baseurl=http://localhost/repo
 gpgcheck=0
 enabled=1
 EOF
+
+nginx -s reload
+nginx -t
+
+# Установка приложения из созданного репозитория 
+yum install SimpleCalendar
+
+# Проверка
+Calendar.py
