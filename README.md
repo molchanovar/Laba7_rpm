@@ -11,14 +11,15 @@ soft distribution
 
 ```
 vagrant up
+...
     distribution: + cd /root/rpmbuild/BUILD
     distribution: + /usr/bin/rm -rf /root/rpmbuild/BUILDROOT/SimpleCalendar-1.00-1.01.x86_64
     distribution: + exit 0
-    
+...
     distribution: /home/vagrant/rpmbuild
     distribution: ├── SPECS
     distribution: │   └── calendar.spec
-
+...
 
 vagrant ssh
 
