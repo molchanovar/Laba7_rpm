@@ -6,7 +6,8 @@
 sudo yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree gcc python3 git
 
 # Создание директорий rpmbuild{BUILD,RPMS,SOURCES,SPECS,SRPMS}
-rpmdev-setuptree
+# rpmdev-setuptree
+sudo mkdir -p /home/vagrant/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 
 # Загрузка SPEC файла (Исходный код приложения в файле Calendar.py)
 git clone https://github.com/molchanovar/Laba7_rpm.git
