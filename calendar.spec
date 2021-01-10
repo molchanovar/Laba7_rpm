@@ -27,10 +27,11 @@ EOF
 
 %install
 mkdir -p %{buildroot}/usr/bin/
-install -m 755 Calendar.py %{buildroot}/usr/bin/hello-world.sh
+install -m 755 Calendar.py %{buildroot}/usr/bin/Calendar.py
 
 %files
 /usr/bin/Calendar.py
 
 %changelog
 # let's skip this for now
+
