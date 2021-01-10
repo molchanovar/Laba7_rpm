@@ -27,8 +27,8 @@ tree /home/vagrant/rpmbuild
 # Установка Nginx  
 wget https://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.18.0-2.el7.ngx.x86_64.rpm
 sudo yum localinstall -y nginx-1.18.0-2.el7.ngx.x86_64.rpm
-systemctl start nginx
-systemctl status nginx
+sudo systemctl start nginx
+sudo systemctl status nginx
 
 # Создание репозитория SimpleCalendar и загрузка своего RPM 
 mkdir /usr/share/nginx/html/repo
