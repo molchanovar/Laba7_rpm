@@ -66,7 +66,7 @@ nginx -s reload
 nginx -t
 
 # Установка приложения из созданного репозитория 
-yum install SimpleCalendar
+yum install -y SimpleCalendar
 
 # Проверка
 Calendar.py
