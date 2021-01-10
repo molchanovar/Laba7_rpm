@@ -3,7 +3,7 @@
 # 1. Создание rpm пакета 
 
 # Утилиты для сборки 
-sudo yum install redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree gcc python3 git curl lynx
+sudo yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils tree gcc python3 git curl lynx
 
 # Создание директорий rpmbuild{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 # rpmdev-setuptree
