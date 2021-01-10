@@ -15,4 +15,8 @@ soft distribution
 
 <B>Calendar.py</B> - исходный код приложения "Календарь" 
 
-<B>CreateRPM_script.sh</B> - 
+<B>CreateRPM_script.sh</B> - скрипт создания rpm приложения и собственного репозитория 
+
+<B>calendar.spec</B> - SPEC файл необходимый для создания rpm и srpm
+
+<B>rpm_help.md</B> - важные команды из лекции 
